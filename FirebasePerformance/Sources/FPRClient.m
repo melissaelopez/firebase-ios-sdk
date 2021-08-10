@@ -249,7 +249,7 @@
 - (void)processAndLogEvent:(FPRMSGPerfMetric *)event {
   BOOL tracingEnabled = self.configuration.isDataCollectionEnabled;
   if (!tracingEnabled) {
-    FPRLogError(kFPRClientPerfNotConfigured, @"Dropping event since data collection is disabled.");
+    FPRLogInfo(kFPRClientPerfNotConfigured, @"Dropping event since data collection is disabled.");
     return;
   }
 
